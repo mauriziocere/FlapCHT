@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<precice-configuration>
+  <log>
+    <sink
+      filter="%Severity% > debug and %Rank% = 0"
+      format="---[precice] %ColorizedSeverity% %Message%"
+      enabled="true" />
+  </log>
+
+  <!-- DATI ACCOPPIATI -->
+  <data:scalar name="Temperature" />
+  <data:scalar name="Heat-Flux" />
+
+  <!-- MESH FLUIDO -->
+  <mesh name="Fluid-Mesh-flapHole" dimensions="2">
+    <use-data name="Temperature" />
+    <use-data name="Heat-Flux" />
+  </mesh>
+
+  <!-- MESH SOLIDO -->
+  <mesh name="Solid-Mesh" dimensions="2">
+    <use-data name="Temperature" />
+    <use-data name="Heat-Flux" />
+  </mesh>
+
+  <participant name="Fluid">
+    <provide-mesh name="Fluid-Mesh-flapHole" />
+    <receive-mesh name="Solid-Mesh" from="Solid" />
+    <read-data name="Heat-Flux" mesh="Fluid-Mesh-flapHole" />
+    <write-data name="Temperature" mesh="Fluid-Mesh-flapHole" />
+    <mapping:nearest-neighbor
+      direction="read"
+      from="Solid-Mesh"
+      to="Fluid-Mesh-flapHole"
+      constraint="consistent" />
+  </participant>
+
+  <participant name="Solid">
+    <receive-mesh name="Fluid-Mesh-flapHole" from="Fluid" />
+    <provide-mesh name="Solid-Mesh" />
+    <mapping:nearest-neighbor
+      direction="read"
+      from="Fluid-Mesh"
+      to="Solid-Mesh"
+      constraint="consistent" />
+    <read-data name="Temperature" mesh="Solid-Mesh" />
+    <write-data name="Heat-Flux" mesh="Solid-Mesh" />
+  
+  </participant>
+
+  <m2n:sockets acceptor="Fluid" connector="Solid" exchange-directory=".." />
+
+  <coupling-scheme:serial-implicit>
+    <time-window-size value="0.01" />
+    <max-time value="1" />
+    <max-iterations value="30" />
+    <participants first="Fluid" second="Solid" />
+    <exchange data="Temperature" mesh="Fluid-Mesh-flapHole" from="Fluid" to="Solid" />
+    <exchange data="Heat-Flux" mesh="Solid-Mesh" from="Solid" to="Fluid" />
+    <relative-convergence-measure limit="1.0e-5" data="Temperature" mesh="Fluid-Mesh-flapHole" />
+    <acceleration:aitken>
+      <data mesh="Solid-Mesh" name="Heat-Flux" />
+      <initial-relaxation value="0.5" />
+    </acceleration:aitken>
+  </coupling-scheme:serial-implicit>
+</precice-configuration>
+

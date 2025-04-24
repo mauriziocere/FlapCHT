@@ -1,0 +1,417 @@
+
+************************************************************
+
+CalculiX Version 2.21, Copyright(C) 1998-2023 Guido Dhondt
+CalculiX comes with ABSOLUTELY NO WARRANTY. This is free
+software, and you are welcome to redistribute it under
+certain conditions, see gpl.htm
+
+************************************************************
+
+You are using an executable made on Sat Jul 29 10:52:01 CEST 2023
+ Decascading the MPC's
+
+ Determining the structure of the matrix:
+ Using up to 1 cpu(s) for setting up the structure of the matrix.
+ number of equations
+ 2002
+ number of nonzero lower triangular matrix elements
+ 20529
+
+ increment 1 attempt 1 
+ increment size= 1.000000e+00
+ sum of previous increments=0.000000e+00
+ actual step time=1.000000e+00
+ actual total time=1.000000e+00
+
+ iteration 1
+
+ Using up to 1 cpu(s) for the heat flux calculation.
+
+ Using up to 1 cpu(s) for the symmetric stiffness/mass contributions.
+
+ Factoring the system of equations using the symmetric spooles solver
+ Using up to 1 cpu(s) for spooles.
+
+ Using up to 1 cpu(s) for the heat flux calculation.
+
+ average flux= 0.000000
+ time avg. flux= 0.010000
+ largest residual flux= 0.000000 in node 1672 and dof 0
+ largest increment of temp= 1.613798e+02
+ largest correction to temp= 1.613798e+02 in node 76 and dof 0
+
+ convergence
+
+ Using up to 1 cpu(s) for the heat flux calculation.
+
+ increment 2 attempt 1 
+ increment size= 1.000000e+00
+ sum of previous increments=1.000000e+00
+ actual step time=2.000000e+00
+ actual total time=2.000000e+00
+
+ iteration 1
+
+ Using up to 1 cpu(s) for the heat flux calculation.
+
+ Using up to 1 cpu(s) for the symmetric stiffness/mass contributions.
+
+ Factoring the system of equations using the symmetric spooles solver
+ Using up to 1 cpu(s) for spooles.
+
+ Using up to 1 cpu(s) for the heat flux calculation.
+
+ average flux= 0.000000
+ time avg. flux= 0.010000
+ largest residual flux= 0.000000 in node 1552 and dof 0
+ largest increment of temp= 5.781881e-11
+ largest correction to temp= 5.781881e-11 in node 80 and dof 0
+
+ convergence; the increment size is increased to 1.500000e+00
+
+ Using up to 1 cpu(s) for the heat flux calculation.
+
+ increment 3 attempt 1 
+ increment size= 1.500000e+00
+ sum of previous increments=2.000000e+00
+ actual step time=3.500000e+00
+ actual total time=3.500000e+00
+
+ iteration 1
+
+ Using up to 1 cpu(s) for the heat flux calculation.
+
+ Using up to 1 cpu(s) for the symmetric stiffness/mass contributions.
+
+ Factoring the system of equations using the symmetric spooles solver
+ Using up to 1 cpu(s) for spooles.
+
+ Using up to 1 cpu(s) for the heat flux calculation.
+
+ average flux= 0.000000
+ time avg. flux= 0.010000
+ largest residual flux= 0.000000 in node 1816 and dof 0
+ largest increment of temp= 1.643124e-13
+ largest correction to temp= 1.643124e-13 in node 907 and dof 0
+
+ convergence; the increment size is increased to 2.250000e+00
+
+ Using up to 1 cpu(s) for the heat flux calculation.
+
+ increment 4 attempt 1 
+ increment size= 2.250000e+00
+ sum of previous increments=3.500000e+00
+ actual step time=5.750000e+00
+ actual total time=5.750000e+00
+
+ iteration 1
+
+ Using up to 1 cpu(s) for the heat flux calculation.
+
+ Using up to 1 cpu(s) for the symmetric stiffness/mass contributions.
+
+ Factoring the system of equations using the symmetric spooles solver
+ Using up to 1 cpu(s) for spooles.
+
+ Using up to 1 cpu(s) for the heat flux calculation.
+
+ average flux= 0.000000
+ time avg. flux= 0.010000
+ largest residual flux= 0.000000 in node 1561 and dof 0
+ largest increment of temp= 1.419223e-13
+ largest correction to temp= 1.419223e-13 in node 1090 and dof 0
+
+ convergence; the increment size is increased to 3.375000e+00
+
+ Using up to 1 cpu(s) for the heat flux calculation.
+
+ increment 5 attempt 1 
+ increment size= 3.375000e+00
+ sum of previous increments=5.750000e+00
+ actual step time=9.125000e+00
+ actual total time=9.125000e+00
+
+ iteration 1
+
+ Using up to 1 cpu(s) for the heat flux calculation.
+
+ Using up to 1 cpu(s) for the symmetric stiffness/mass contributions.
+
+ Factoring the system of equations using the symmetric spooles solver
+ Using up to 1 cpu(s) for spooles.
+
+ Using up to 1 cpu(s) for the heat flux calculation.
+
+ average flux= 0.000000
+ time avg. flux= 0.010000
+ largest residual flux= 0.000000 in node 1729 and dof 0
+ largest increment of temp= 2.065779e-13
+ largest correction to temp= 2.065779e-13 in node 740 and dof 0
+
+ convergence; the increment size is increased to 5.062500e+00
+
+ Using up to 1 cpu(s) for the heat flux calculation.
+
+ increment 6 attempt 1 
+ increment size= 5.062500e+00
+ sum of previous increments=9.125000e+00
+ actual step time=1.418750e+01
+ actual total time=1.418750e+01
+
+ iteration 1
+
+ Using up to 1 cpu(s) for the heat flux calculation.
+
+ Using up to 1 cpu(s) for the symmetric stiffness/mass contributions.
+
+ Factoring the system of equations using the symmetric spooles solver
+ Using up to 1 cpu(s) for spooles.
+
+ Using up to 1 cpu(s) for the heat flux calculation.
+
+ average flux= 0.000000
+ time avg. flux= 0.010000
+ largest residual flux= 0.000000 in node 1851 and dof 0
+ largest increment of temp= 1.928933e-13
+ largest correction to temp= 1.928933e-13 in node 471 and dof 0
+
+ convergence; the increment size is increased to 7.593750e+00
+
+ Using up to 1 cpu(s) for the heat flux calculation.
+
+ increment 7 attempt 1 
+ increment size= 7.593750e+00
+ sum of previous increments=1.418750e+01
+ actual step time=2.178125e+01
+ actual total time=2.178125e+01
+
+ iteration 1
+
+ Using up to 1 cpu(s) for the heat flux calculation.
+
+ Using up to 1 cpu(s) for the symmetric stiffness/mass contributions.
+
+ Factoring the system of equations using the symmetric spooles solver
+ Using up to 1 cpu(s) for spooles.
+
+ Using up to 1 cpu(s) for the heat flux calculation.
+
+ average flux= 0.000000
+ time avg. flux= 0.010000
+ largest residual flux= 0.000000 in node 1828 and dof 0
+ largest increment of temp= 1.806676e-13
+ largest correction to temp= 1.806676e-13 in node 67 and dof 0
+
+ convergence; the increment size is increased to 1.139063e+01
+
+ Using up to 1 cpu(s) for the heat flux calculation.
+
+ increment 8 attempt 1 
+ increment size= 1.139063e+01
+ sum of previous increments=2.178125e+01
+ actual step time=3.317188e+01
+ actual total time=3.317188e+01
+
+ iteration 1
+
+ Using up to 1 cpu(s) for the heat flux calculation.
+
+ Using up to 1 cpu(s) for the symmetric stiffness/mass contributions.
+
+ Factoring the system of equations using the symmetric spooles solver
+ Using up to 1 cpu(s) for spooles.
+
+ Using up to 1 cpu(s) for the heat flux calculation.
+
+ average flux= 0.000000
+ time avg. flux= 0.010000
+ largest residual flux= 0.000000 in node 1753 and dof 0
+ largest increment of temp= 1.609158e-13
+ largest correction to temp= 1.609158e-13 in node 69 and dof 0
+
+ convergence; the increment size is increased to 1.708594e+01
+
+ Using up to 1 cpu(s) for the heat flux calculation.
+
+ increment 9 attempt 1 
+ increment size= 1.708594e+01
+ sum of previous increments=3.317188e+01
+ actual step time=5.025781e+01
+ actual total time=5.025781e+01
+
+ iteration 1
+
+ Using up to 1 cpu(s) for the heat flux calculation.
+
+ Using up to 1 cpu(s) for the symmetric stiffness/mass contributions.
+
+ Factoring the system of equations using the symmetric spooles solver
+ Using up to 1 cpu(s) for spooles.
+
+ Using up to 1 cpu(s) for the heat flux calculation.
+
+ average flux= 0.000000
+ time avg. flux= 0.010000
+ largest residual flux= 0.000000 in node 1823 and dof 0
+ largest increment of temp= 1.807966e-13
+ largest correction to temp= 1.807966e-13 in node 22 and dof 0
+
+ convergence; the increment size is increased to 2.562891e+01
+
+ Using up to 1 cpu(s) for the heat flux calculation.
+
+ increment 10 attempt 1 
+ increment size= 2.562891e+01
+ sum of previous increments=5.025781e+01
+ actual step time=7.588672e+01
+ actual total time=7.588672e+01
+
+ iteration 1
+
+ Using up to 1 cpu(s) for the heat flux calculation.
+
+ Using up to 1 cpu(s) for the symmetric stiffness/mass contributions.
+
+ Factoring the system of equations using the symmetric spooles solver
+ Using up to 1 cpu(s) for spooles.
+
+ Using up to 1 cpu(s) for the heat flux calculation.
+
+ average flux= 0.000000
+ time avg. flux= 0.010000
+ largest residual flux= 0.000000 in node 1847 and dof 0
+ largest increment of temp= 2.208502e-13
+ largest correction to temp= 2.208502e-13 in node 61 and dof 0
+
+ convergence; the increment size is increased to 3.844336e+01
+
+ the increment size exceeds the remainder of the step and is decreased to 2.411328e+01
+
+ Using up to 1 cpu(s) for the heat flux calculation.
+
+ increment 11 attempt 1 
+ increment size= 2.411328e+01
+ sum of previous increments=7.588672e+01
+ actual step time=1.000000e+02
+ actual total time=1.000000e+02
+
+ iteration 1
+
+ Using up to 1 cpu(s) for the heat flux calculation.
+
+ Using up to 1 cpu(s) for the symmetric stiffness/mass contributions.
+
+ Factoring the system of equations using the symmetric spooles solver
+ Using up to 1 cpu(s) for spooles.
+
+ Using up to 1 cpu(s) for the heat flux calculation.
+
+ average flux= 0.000000
+ time avg. flux= 0.010000
+ largest residual flux= 0.000000 in node 1816 and dof 0
+ largest increment of temp= 1.413449e-13
+ largest correction to temp= 1.413449e-13 in node 54 and dof 0
+
+ convergence; the increment size is increased to 3.616992e+01
+
+ the increment size exceeds the remainder of the step and is decreased to 0.000000e+00
+
+ Using up to 1 cpu(s) for the heat flux calculation.
+
+
+  The numbers below are estimated upper bounds
+
+  number of:
+
+   nodes:         2002
+   elements:          895
+   one-dimensional elements:            0
+   two-dimensional elements:            0
+   integration points per element:            4
+   degrees of freedom per node:            3
+   layers per element:            1
+
+   distributed facial loads:            0
+   distributed volumetric loads:            0
+   concentrated loads:            0
+   single point constraints:            0
+   multiple point constraints:            1
+   terms in all multiple point constraints:            1
+   tie constraints:            0
+   dependent nodes tied by cyclic constraints:            0
+   dependent nodes in pre-tension constraints:            0
+
+   sets:           11
+   terms in all sets:         2619
+
+   materials:            1
+   constants per material and temperature:            0
+   temperature points per material:            1
+   plastic data points per material:            0
+
+   orientations:            0
+   amplitudes:            0
+   data points in all amplitudes:            0
+   print requests:            0
+   transformations:            0
+   property cards:            0
+
+ *WARNING reading *SURFACE: parameter not recognized:
+          ELSET=SUR1_ELEMS
+ *WARNING reading *SURFACE. Card image:
+          *SURFACE,NAME=SOLIDINTERFACE1,TYPE=ELEMENT,ELSET=SUR1_ELEMS,S1
+
+ *WARNING reading *SURFACE: parameter not recognized:
+          S1
+ *WARNING reading *SURFACE. Card image:
+          *SURFACE,NAME=SOLIDINTERFACE1,TYPE=ELEMENT,ELSET=SUR1_ELEMS,S1
+
+ *WARNING reading *SURFACE: parameter not recognized:
+          ELSET=SUR2_ELEMS
+ *WARNING reading *SURFACE. Card image:
+          *SURFACE,NAME=SOLIDINTERFACE2,TYPE=ELEMENT,ELSET=SUR2_ELEMS,S2
+
+ *WARNING reading *SURFACE: parameter not recognized:
+          S2
+ *WARNING reading *SURFACE. Card image:
+          *SURFACE,NAME=SOLIDINTERFACE2,TYPE=ELEMENT,ELSET=SUR2_ELEMS,S2
+
+ *WARNING reading *SURFACE: parameter not recognized:
+          ELSET=SUR4_ELEMS
+ *WARNING reading *SURFACE. Card image:
+          *SURFACE,NAME=SOLIDINTERFACE4,TYPE=ELEMENT,ELSET=SUR4_ELEMS,S4
+
+ *WARNING reading *SURFACE: parameter not recognized:
+          S4
+ *WARNING reading *SURFACE. Card image:
+          *SURFACE,NAME=SOLIDINTERFACE4,TYPE=ELEMENT,ELSET=SUR4_ELEMS,S4
+
+
+ STEP            1
+
+ *WARNING reading *STEP: parameter not recognized:
+          NAME=HEATTRANSFER
+ *WARNING reading *STEP. Card image:
+          *STEP,NAME=HEATTRANSFER,NLGEOM=NO
+
+ *INFO reading *STEP: nonlinear geometric
+       effects are turned off
+
+ *WARNING reading *NODE FILE or *EL FILE:
+          parameter not recognized:
+          FIELD
+ *WARNING reading *OUTPUT . Card image:
+          *OUTPUT,FIELD,FREQUENCY=1
+
+ Static analysis was selected
+
+ Newton-Raphson iterative procedure is active
+
+
+ Job finished
+
+________________________________________
+
+Total CalculiX Time: 0.230477
+________________________________________

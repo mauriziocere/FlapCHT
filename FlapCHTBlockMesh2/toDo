@@ -1,0 +1,3 @@
+Devi eseguire il comando decomposePar prima di lanciare una simulazione parallela.
+mpirun -np 4 simpleFoam -parallel
+o chtMultiRegionFoam o pimpleFoam, ecc. a seconda del tuo solver
