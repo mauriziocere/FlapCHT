@@ -3,7 +3,7 @@ participants:
     Solid:
         interfaces:
         - nodes-mesh: Solid-Mesh
-          patch: [sur1_nodes, sur2_nodes, sur4_nodes]
+          patch: CHTnodes
           read-data: [Temperature]
           write-data: [Heat-Flux]
           
