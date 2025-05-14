@@ -1,0 +1,7 @@
+participant Fluid
+mesh Fluid-Mesh
+read-data Heat-Flux
+write-data Temperature
+
+patches (interfaceSolid)
+
