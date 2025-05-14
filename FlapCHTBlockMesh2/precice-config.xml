@@ -7,61 +7,61 @@
       enabled="true" />
   </log>
 
-  <!-- DATI ACCOPPIATI -->
   <data:scalar name="Temperature" />
   <data:scalar name="Heat-Flux" />
 
-  <!-- MESH FLUIDO -->
-  <mesh name="Fluid-Mesh-flapHole" dimensions="2">
+  <mesh name="Fluid-Mesh" dimensions="2">
     <use-data name="Temperature" />
     <use-data name="Heat-Flux" />
   </mesh>
 
-  <!-- MESH SOLIDO -->
   <mesh name="Solid-Mesh" dimensions="2">
-    <use-data name="Temperature" />
     <use-data name="Heat-Flux" />
+  </mesh>
+
+  <mesh name="Solid-Mesh-nodes" dimensions="2">
+    <use-data name="Temperature" />
   </mesh>
 
   <participant name="Fluid">
-    <provide-mesh name="Fluid-Mesh-flapHole" />
+    <provide-mesh name="Fluid-Mesh" />
     <receive-mesh name="Solid-Mesh" from="Solid" />
-    <read-data name="Heat-Flux" mesh="Fluid-Mesh-flapHole" />
-    <write-data name="Temperature" mesh="Fluid-Mesh-flapHole" />
+    <read-data name="Heat-Flux" mesh="Fluid-Mesh" />
+    <write-data name="Temperature" mesh="Fluid-Mesh" />
     <mapping:nearest-neighbor
       direction="read"
       from="Solid-Mesh"
-      to="Fluid-Mesh-flapHole"
+      to="Fluid-Mesh"
       constraint="consistent" />
   </participant>
 
   <participant name="Solid">
-    <receive-mesh name="Fluid-Mesh-flapHole" from="Fluid" />
+    <receive-mesh name="Fluid-Mesh" from="Fluid" />
     <provide-mesh name="Solid-Mesh" />
+    <provide-mesh name="Solid-Mesh-nodes" />
     <mapping:nearest-neighbor
       direction="read"
       from="Fluid-Mesh"
-      to="Solid-Mesh"
+      to="Solid-Mesh-nodes"
       constraint="consistent" />
-    <read-data name="Temperature" mesh="Solid-Mesh" />
+    <read-data name="Temperature" mesh="Solid-Mesh-nodes" />
     <write-data name="Heat-Flux" mesh="Solid-Mesh" />
-  
+    <watch-point mesh="Solid-Mesh" name="MyWatchPoint" coordinate="0.5; 0.0" />
   </participant>
 
   <m2n:sockets acceptor="Fluid" connector="Solid" exchange-directory=".." />
 
   <coupling-scheme:serial-implicit>
     <time-window-size value="0.01" />
-    <max-time value="1" />
+    <max-time value="10" />
     <max-iterations value="30" />
     <participants first="Fluid" second="Solid" />
-    <exchange data="Temperature" mesh="Fluid-Mesh-flapHole" from="Fluid" to="Solid" />
+    <exchange data="Temperature" mesh="Fluid-Mesh" from="Fluid" to="Solid" />
     <exchange data="Heat-Flux" mesh="Solid-Mesh" from="Solid" to="Fluid" />
-    <relative-convergence-measure limit="1.0e-5" data="Temperature" mesh="Fluid-Mesh-flapHole" />
-    <acceleration:aitken>
+    <relative-convergence-measure limit="1.0e-5" data="Temperature" mesh="Fluid-Mesh" />
+    <acceleration:IQN-ILS>
       <data mesh="Solid-Mesh" name="Heat-Flux" />
       <initial-relaxation value="0.5" />
-    </acceleration:aitken>
+    </acceleration:IQN-ILS>
   </coupling-scheme:serial-implicit>
 </precice-configuration>
-
