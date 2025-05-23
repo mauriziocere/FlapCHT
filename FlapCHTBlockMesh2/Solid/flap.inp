@@ -8601,23 +8601,23 @@ Internal-1_Sflux_interface_S1, S1
 **
 ** Materials +++++++++++++++++++++++++++++++++++++++++++++++
 **
-*MATERIAL, NAME=S185
+*MATERIAL, NAME=6061_Alloy
 *ELASTIC
-210000e6, 0.280
+69000e6, 0.330
 *CONDUCTIVITY
-0.014
+170e-6
 *EXPANSION
-1.100e-05
+2.400e-05
 *SPECIFIC HEAT
-44e7
+13e5
 
-** conductivity / (density * Specific Heat) = 1
+
 *DENSITY
-7.8e-9
+2700e-6
 **
 ** Sections ++++++++++++++++++++++++++++++++++++++++++++++++
 **
-*SOLID SECTION, ELSET=Elems, MATERIAL=S185
+*SOLID SECTION, ELSET=Elems, MATERIAL=6061_Alloy
 **
 ** Pre-tension sections ++++++++++++++++++++++++++++++++++++
 **
@@ -8637,7 +8637,7 @@ Internal-1_Sflux_interface_S1, S1
 ** Initial conditions ++++++++++++++++++++++++++++++++++++++
 **
 *INITIAL CONDITIONS,TYPE=TEMPERATURE
-Nall, 500.0
+Nall, 340.0
 **
 ** Steps +++++++++++++++++++++++++++++++++++++++++++++++++++
 *STEP, INC=2000, nlgeom=NO
@@ -8645,7 +8645,7 @@ Nall, 500.0
 0.01,10.0 
 
 *BOUNDARY
-NCHTNODES,11,11,500
+NCHTNODES,11,11,340
 *NODE FILE
 NT
 *End Step
